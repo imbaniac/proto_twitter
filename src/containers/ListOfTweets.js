@@ -1,5 +1,5 @@
-import { connect } from 'react-redux';
 import TweetList from '../components/TweetList';
+import { connect } from 'react-redux';
 import { commentTweet } from '../actions/actions';
 
 const mapStateToProps = (state) => {

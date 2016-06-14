@@ -1,6 +1,8 @@
 export const ADD_TWEET = 'ADD_TWEET';
 export const COMMENT_TWEET = "COMMENT_TWEET";
 export const AUTH_USER = "AUTH_USER";
+import uuid from 'uuid';
+
 
 let nextTweet = 0;
 
@@ -25,8 +27,6 @@ export function commentTweet(comment, index) {
 export function authUser(login){
 	return {
 		type: AUTH_USER,
-		login,
-		tweets: [],
-		comments: []
+		login
 	}
 }

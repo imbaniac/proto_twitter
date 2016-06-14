@@ -1,16 +1,20 @@
 import { ADD_TWEET, COMMENT_TWEET, AUTH_USER } from '../actions/actions';
 import { combineReducers } from 'redux';
 
-function tweets(state = [], action){
+
+function tweets(tweets = [], action ){
 	switch(action.type){
-        case ADD_TWEET:
-			return [
-				...state, {
-					comments: []
-				}
-			]
+		case ADD_TWEET:
+            return [
+				...tweets, {
+                    id: action.id,
+                    tweet: action.tweet,
+                    comments: action.comments,
+                    createdAt: action.createdAt
+                }
+			];
         case COMMENT_TWEET:
-            return state.map((tweet, index) => {
+            return tweets.map((tweet, index) => {
                 if(index === action.index){
                     return Object.assign({}, tweet, {
                         comments: tweet.comments.concat(action.comment)
@@ -18,24 +22,23 @@ function tweets(state = [], action){
                 }
                 return tweet;
             })
-
-        default:
-            return state;
+		default:
+			return tweets;
     }
 }
 
-function users(state = [], action){
+function users(users = [], action){
     switch(action.type){
 		case AUTH_USER:
 			return [
-				...state, {
-					login: action.login,
-                    tweets: action.tweets,
-                    comments: action.comments
+				...users, {
+					login: action.login
                 }
 			]
+		default:
+			return users;
     }
 }
-const tweetApp = combineReducers({ users });
+const tweetApp = combineReducers({ users, tweets });
 
 export default tweetApp;

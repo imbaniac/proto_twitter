@@ -3,7 +3,7 @@ import {render} from 'react-dom';
 import {Provider} from 'react-redux';
 import {applyMiddleware, createStore} from 'redux';
 import tweetApp from './reducers/reducers';
-import App from './components/App';
+import App from './containers/App';
 import createLogger from 'redux-logger';
 
 require('./styles/App.css');

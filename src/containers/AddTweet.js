@@ -2,14 +2,17 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { addTweet } from '../actions/actions';
 
-let AddTweet = ({ dispatch }) => {
+let AddTweet = ({ dispatch, users }) => {
   let input;
+  let currentUser = users[length-1];
   return (
     <div>
       <form className="tweetForm" onSubmit={e => {
         e.preventDefault();
         if (!input.value.trim()) return;
+
         dispatch(addTweet(input.value));
+
         input.value = '';
       }}>
         <input ref={node => {
@@ -22,6 +25,13 @@ let AddTweet = ({ dispatch }) => {
     </div>
   )
 }
-AddTweet = connect()(AddTweet)
+
+const mapStateToProps = (state) => {
+  return {
+    users: state.users
+  }
+}
+
+AddTweet = connect(mapStateToProps)(AddTweet)
 
 export default AddTweet;
