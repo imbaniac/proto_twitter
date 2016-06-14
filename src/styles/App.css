@@ -1,26 +1,48 @@
+body, li, ul{
+	margin: 0;
+	padding: 0;
+}
+
+button{
+	all: unset;
+}
+
 body{
   background: url('http://training.ksoftware.co.in/Images/all-bg.jpg');
 }
 .main{
   text-align: center;
-  margin: 0 auto;
+  margin: 50px auto;
   width: 60%;
+  display: flex;
+  flex-direction: column;
 }
-.tweetForm input{
-  font-size: 1.5em;
+.tweetForm{
+	display: flex;
+	flex-direction: column;
+}
+.tweetForm textarea{
+	font-size: 1.5em;
 }
 .tweetForm button{
-  font-size: 1.5em;
-  margin-left: 20px;
+	font-size: 1.5em;
+	width: 150px;
+	margin-top: 20px;
+	align-self: flex-end;
+	background: #bbf6ff;
+	border: 1px #bbf9ff;
+	opacity: 0.6;
+}
+.tweetForm button:hover{
+	opacity: 1;
 }
 
 .tweetList{
-  list-style: none;
-   margin: 1em 0;
-   padding: 0;
+	list-style: none;
+	display: flex;
+	flex-direction: column-reverse;;
 }
 .tweetList>li{
-   font-weight: bold;
    margin: 20px;
    padding: 3px 10px 5px 20px;
    color: #666;
@@ -32,40 +54,60 @@ body{
 
 }
 .tweetText{
-  margin: 20px;
   font-size: 1.5em;
-
+}
+.commentsForm{
+	display: flex;
+	justify-content: space-around;
 }
 .commentsForm textarea{
-  display: block;
-  margin: 20px auto;
-  width: 80%;
-  min-height: 100px;
-  font-size: 1.3em;
+	width: 80%;
+	min-height: 100px;
+	font-size: 1.2em;
 }
 .commentsForm button{
-  font-size: 1.3em;
-  margin: 10px 50px 0 0;
-  float: right;
+	height: 40px;
+	align-self: center;
+	background: #eee;
+	padding: 10px;
+	font-size: 1.3em;
+}
+.commentsForm button:hover{
+	background: #808080;
+	color: white;
 }
 .commentsList{
-   list-style: none;
-   padding: 0;
-   width: 80%;
-   margin: 20px auto;
-}
-.commentTitle{
-  margin-top: 70px;
-  color: #079800;
+	display: flex;
+	flex-direction: column;
+	list-style: none;
+	width: 60%;
+	margin: 20px auto;
 }
 .commentsList li{
-  background: #ECFFEB;
-  margin-top: 15px;
-  font-weight: bold;
-   padding: 10px 20px 10px 20px;
-   border-bottom: 1px solid #ccc;
+	background: #ECFFEB;
+	padding: 10px;
+	border-bottom: 1px solid #ccc;
 }
 .date{
-  font-size: 0.7em;
-  margin-top: 3px;
+  font-size: 0.8em;
+  margin-bottom: 20px;
+}
+.author span{
+	text-align: right;
+}
+.auth-box{
+	display: flex;
+	justify-content: center;
+}
+.login{
+	display: flex;
+}
+.login input{
+	font-size: 1.4em;
+}
+.login button{
+	margin-left: 10px;
+	background: #bbf6ff;
+	padding: 15px;
+	font-size: 1.2em;
 }

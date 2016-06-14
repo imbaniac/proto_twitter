@@ -13,7 +13,7 @@ let AddTweet = ({ dispatch, users }) => {
         dispatch(addTweet(input.value, currentUser.login));
         input.value = '';
       }}>
-        <input ref={node => {
+        <textarea ref={node => {
           input = node;
 	  }} placeholder="Your words will become history. No, they won't *_* "/>
         <button type="submit">

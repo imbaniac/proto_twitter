@@ -7,7 +7,7 @@ const Comments = ({comments, author}) => {
         {comments.map((comment, i)=>
             <li key={i}>
 				<p>{ comment }</p>
-				<em>{ author }</em>
+				<em className="author">By: { author }</em>
             </li>
 
         )}

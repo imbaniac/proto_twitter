@@ -4,28 +4,22 @@ export const AUTH_USER = "AUTH_USER";
 
 let nextTweet = 0;
 
-export function addTweet(tweet, owner){
-    return {
+export const addTweet = (tweet, owner) => ({
         type: ADD_TWEET,
         id: nextTweet++,
         tweet,
 		owner,
         comments: [],
         createdAt: new Date().toUTCString()
-    }
-}
+    });
 
-export function commentTweet(comment, index) {
-    return {
+export const commentTweet = (comment, index) => ({
         type: COMMENT_TWEET,
         index,
         comment
-    }
-}
+    });
 
-export function authUser(login){
-	return {
+export const authUser = (login) => ({
 		type: AUTH_USER,
 		login
-	}
-}
+	})

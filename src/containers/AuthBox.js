@@ -5,7 +5,7 @@ import { authUser } from '../actions/actions';
 let AuthBox = ({ dispatch }) => {
 	let input;
 	return (
-		<div>
+		<div className="auth-box">
 	      <form className="login" onSubmit={e => {
 	        e.preventDefault();
 	        if (!input.value.trim()) return;

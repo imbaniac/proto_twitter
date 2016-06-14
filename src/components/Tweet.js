@@ -7,9 +7,9 @@ const Tweet = ({tw, onCommentSubmit}) => {
 
     return(
         <div>
-			<em>{tw.owner}</em>
+			<em>By: {tw.owner}</em>
 			<p className="tweetText">{tw.tweet}</p>
-			<time className="date">Tweeted at: {tw.createdAt}</time>
+			<span className="date">Tweeted at: <time>{tw.createdAt}</time></span>
 
 			<form className="commentsForm" onSubmit={ (e) =>{
                 e.preventDefault()
