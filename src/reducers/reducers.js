@@ -33,7 +33,8 @@ function users(users = [], action){
 		case AUTH_USER:
 			return [
 				...users, {
-					login: action.login
+					login: action.login,
+					isCurrent: action.isCurrent
                 }
 			]
 		default:

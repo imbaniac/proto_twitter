@@ -8,7 +8,7 @@ button{
 }
 
 body{
-  background: url('http://training.ksoftware.co.in/Images/all-bg.jpg');
+	background: linear-gradient(to right, rgba(147,206,222,1) 0%, rgba(117,189,209,1) 41%, rgba(73,165,191,1) 100%);
 }
 .main{
   text-align: center;
@@ -17,11 +17,31 @@ body{
   display: flex;
   flex-direction: column;
 }
+.auth-box{
+	display: flex;
+	justify-content: center;
+}
+.login{
+	display: flex;
+}
+.login input{
+	min-width: 300px;
+	font-size: 1.4em;
+}
+.login button{
+	min-width: 80px;
+	margin-left: 10px;
+	background: #bbf6ff;
+	padding: 15px;
+	font-size: 1.2em;
+}
+
 .tweetForm{
 	display: flex;
 	flex-direction: column;
 }
 .tweetForm textarea{
+	min-height: 100px;
 	font-size: 1.5em;
 }
 .tweetForm button{
@@ -95,20 +115,4 @@ body{
 }
 .author span{
 	text-align: right;
-}
-.auth-box{
-	display: flex;
-	justify-content: center;
-}
-.login{
-	display: flex;
-}
-.login input{
-	font-size: 1.4em;
-}
-.login button{
-	margin-left: 10px;
-	background: #bbf6ff;
-	padding: 15px;
-	font-size: 1.2em;
 }

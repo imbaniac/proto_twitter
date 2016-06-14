@@ -19,7 +19,8 @@ export const commentTweet = (comment, index) => ({
         comment
     });
 
-export const authUser = (login) => ({
+export const authUser = (login, isCurrent=true) => ({
 		type: AUTH_USER,
-		login
+		login,
+		isCurrent
 	})

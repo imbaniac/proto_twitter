@@ -4,13 +4,13 @@ import { addTweet } from '../actions/actions';
 
 let AddTweet = ({ dispatch, users }) => {
   let input;
-  let currentUser = users[users.length-1];
+  let currentUser = users.find(user=> user.isCurrent).login;
   return (
     <div>
       <form className="tweetForm" onSubmit={e => {
         e.preventDefault();
         if (!input.value.trim()) return;
-        dispatch(addTweet(input.value, currentUser.login));
+        dispatch(addTweet(input.value, currentUser));
         input.value = '';
       }}>
         <textarea ref={node => {

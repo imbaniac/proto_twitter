@@ -9,17 +9,15 @@ class App extends React.Component {
 	render(){
 		return (
 		  <div className="main">
-		  	{this.props.users.length ? <AddTweet /> : <AuthBox />}
+		  	{this.props.users.find(user=> user.isCurrent) ? <AddTweet /> : <AuthBox />}
 		    <ListOfTweets />
 		  </div>
 		);
 	}
 }
 
-const mapStateToProps = (state) => {
-  return {
+const mapStateToProps = (state) => ({
     users: state.users
-  }
-}
+})
 
 export default connect(mapStateToProps)(App)

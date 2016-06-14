@@ -14,7 +14,7 @@ let AuthBox = ({ dispatch }) => {
 	      }}>
 	        <input ref={node => {
 	          input = node;
-		  }} placeholder="YOUR NAME PLEASE???"/>
+		  }} placeholder="Name"/>
 	        <button type="submit">
 	          Login
 	        </button>

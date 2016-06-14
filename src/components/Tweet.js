@@ -1,13 +1,11 @@
 import React from 'react';
 import Comments from './Comments';
 
-const Tweet = ({tw, onCommentSubmit}) => {
+const Tweet = ({tw, onCommentSubmit, currentUser}) => {
     let input;
-	let currentUser = tw.owner;
-
     return(
         <div>
-			<em>By: {tw.owner}</em>
+			<em>By: {currentUser}</em>
 			<p className="tweetText">{tw.tweet}</p>
 			<span className="date">Tweeted at: <time>{tw.createdAt}</time></span>
 
