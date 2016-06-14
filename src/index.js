@@ -10,7 +10,7 @@ require('./styles/App.css');
 
 let logger = createLogger();
 let store = createStore(tweetApp, applyMiddleware(logger));
-
+console.log(store.getState());
 render(
     <Provider store={store}>
         <App />

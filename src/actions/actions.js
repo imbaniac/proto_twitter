@@ -25,6 +25,7 @@ export function commentTweet(comment, index) {
 export function authUser(login){
 	return {
 		type: AUTH_USER,
+		login,
 		tweets: [],
 		comments: []
 	}
