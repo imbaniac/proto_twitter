@@ -15,5 +15,4 @@ const Comments = ({comments, author}) => {
 
     )
 }
-
 export default Comments;
