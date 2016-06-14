@@ -10,8 +10,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return{
-        onCommentSubmit: (comment, id) => {
-            dispatch(commentTweet(comment, id))
+        onCommentSubmit: (comment, id, author) => {
+            dispatch(commentTweet(comment, id, author))
         }
     }
 }

@@ -9,6 +9,7 @@ function tweets(tweets = [], action ){
 				...tweets, {
                     id: action.id,
                     tweet: action.tweet,
+					owner: action.owner,
                     comments: action.comments,
                     createdAt: action.createdAt
                 }

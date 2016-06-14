@@ -4,15 +4,13 @@ import { addTweet } from '../actions/actions';
 
 let AddTweet = ({ dispatch, users }) => {
   let input;
-  let currentUser = users[length-1];
+  let currentUser = users[users.length-1];
   return (
     <div>
       <form className="tweetForm" onSubmit={e => {
         e.preventDefault();
         if (!input.value.trim()) return;
-
-        dispatch(addTweet(input.value));
-
+        dispatch(addTweet(input.value, currentUser.login));
         input.value = '';
       }}>
         <input ref={node => {

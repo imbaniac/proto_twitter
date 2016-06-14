@@ -6,21 +6,23 @@ import uuid from 'uuid';
 
 let nextTweet = 0;
 
-export function addTweet(tweet){
+export function addTweet(tweet, owner){
     return {
         type: ADD_TWEET,
         id: nextTweet++,
         tweet,
+		owner,
         comments: [],
         createdAt: new Date().toUTCString()
     }
 }
 
-export function commentTweet(comment, index) {
+export function commentTweet(comment, index, author) {
     return {
         type: COMMENT_TWEET,
         index,
-        comment
+        comment,
+		author
     }
 }
 
