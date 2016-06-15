@@ -5,22 +5,22 @@ export const AUTH_USER = "AUTH_USER";
 let nextTweet = 0;
 
 export const addTweet = (tweet, owner) => ({
-        type: ADD_TWEET,
-        id: nextTweet++,
-        tweet,
-		owner,
-        comments: [],
-        createdAt: new Date().toLocaleString()
-    });
+	type: ADD_TWEET,
+	id: nextTweet++,
+	tweet,
+	owner,
+	comments: [],
+	createdAt: new Date().toLocaleString()
+});
 
 export const commentTweet = (comment, index) => ({
-        type: COMMENT_TWEET,
-        index,
-        comment
-    });
+	type: COMMENT_TWEET,
+	index,
+	comment
+});
 
 export const authUser = (login, isCurrent=true) => ({
-		type: AUTH_USER,
-		login,
-		isCurrent
-	})
+	type: AUTH_USER,
+	login,
+	isCurrent
+})

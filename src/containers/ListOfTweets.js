@@ -9,9 +9,9 @@ const mapStateToProps = (state) => ({
 })
 
 const mapDispatchToProps = (dispatch) => ({
-        onCommentSubmit: (comment, id, author) => {
-            dispatch(commentTweet(comment, id, author))
-    }
+	onCommentSubmit: (comment, id, author) => {
+		dispatch(commentTweet(comment, id, author))
+	}
 })
 
 const ListOfTweets = connect(mapStateToProps, mapDispatchToProps)(TweetList);

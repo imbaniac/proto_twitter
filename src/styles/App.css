@@ -11,11 +11,11 @@ body{
 	background: linear-gradient(to right, rgba(147,206,222,1) 0%, rgba(117,189,209,1) 41%, rgba(73,165,191,1) 100%);
 }
 .main{
-  text-align: center;
-  margin: 50px auto;
-  width: 60%;
-  display: flex;
-  flex-direction: column;
+	text-align: center;
+	margin: 50px auto;
+	width: 60%;
+	display: flex;
+	flex-direction: column;
 }
 .auth-box{
 	display: flex;
@@ -63,21 +63,21 @@ body{
 	flex-direction: column-reverse;;
 }
 .tweetList>li{
-   margin: 20px;
-   padding: 3px 10px 5px 20px;
-   color: #666;
-   box-shadow: 14px 16px 40px -13px rgba(0,0,0,0.75);
-   background: #FDFDFD
+	margin: 20px;
+	padding: 3px 10px 5px 20px;
+	color: #666;
+	box-shadow: 14px 16px 40px -13px rgba(0,0,0,0.75);
+	background: #FDFDFD
 }
 .tweetList>li:hover{
-  color: #000;
+	color: #000;
 
 }
 .tweetText{
-  font-size: 1.5em;
+	font-size: 1.5em;
 }
 .date{
-  font-size: 0.8em;
+	font-size: 0.8em;
 }
 .commentsForm{
 	display: flex;

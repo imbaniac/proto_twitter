@@ -6,20 +6,20 @@ let AuthBox = ({ dispatch }) => {
 	let input;
 	return (
 		<div className="auth-box">
-	      <form className="login" onSubmit={e => {
-	        e.preventDefault();
-	        if (!input.value.trim()) return;
-	        dispatch(authUser(input.value));
-	        input.value = '';
-	      }}>
-	        <input ref={node => {
-	          input = node;
-		  }} placeholder="Name"/>
-	        <button type="submit">
-	          Login
-	        </button>
-	      </form>
-	    </div>
+		<form className="login" onSubmit={e => {
+			e.preventDefault();
+			if (!input.value.trim()) return;
+			dispatch(authUser(input.value));
+			input.value = '';
+		}}>
+		<input ref={node => {
+			input = node;
+		}} placeholder="Name"/>
+		<button type="submit">
+		Login
+		</button>
+		</form>
+		</div>
 	)
 }
 
