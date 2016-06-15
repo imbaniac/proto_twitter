@@ -24,11 +24,9 @@ let AddTweet = ({ dispatch, users }) => {
   )
 }
 
-const mapStateToProps = (state) => {
-  return {
+const mapStateToProps = (state) => ({
     users: state.users
-  }
-}
+})
 
 AddTweet = connect(mapStateToProps)(AddTweet)
 

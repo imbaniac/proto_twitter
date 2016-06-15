@@ -10,7 +10,7 @@ export const addTweet = (tweet, owner) => ({
         tweet,
 		owner,
         comments: [],
-        createdAt: new Date().toUTCString()
+        createdAt: new Date().toLocaleString()
     });
 
 export const commentTweet = (comment, index) => ({
