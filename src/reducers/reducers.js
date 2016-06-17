@@ -14,8 +14,8 @@ function tweets(tweets = [], action ){
 				}
 			];
 		case COMMENT_TWEET:
-			return tweets.map((tweet, index) => {
-				if(index === action.index){
+			return tweets.map((tweet) => {
+				if(tweet.id === action.index){
 					return Object.assign({}, tweet, {
 						comments: tweet.comments.concat(action.comment)
 					})

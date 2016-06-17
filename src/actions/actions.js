@@ -2,11 +2,11 @@ export const ADD_TWEET = 'ADD_TWEET';
 export const COMMENT_TWEET = "COMMENT_TWEET";
 export const AUTH_USER = "AUTH_USER";
 
-let nextTweet = 0;
+import {v4} from 'node-uuid';
 
 export const addTweet = (tweet, owner) => ({
 	type: ADD_TWEET,
-	id: nextTweet++,
+	id: v4(),
 	tweet,
 	owner,
 	comments: [],
